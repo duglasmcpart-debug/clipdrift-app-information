@@ -1,0 +1,47 @@
+:root {
+  color-scheme: dark;
+  --surface: #10151c;
+  --text: #f0f3f6;
+  --body: #c1cbd5;
+  --link: #a9deff;
+  --line: #394857;
+  --mark: #f5a45b;
+  font: 100%/1.62 "Segoe UI", system-ui, sans-serif;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--surface); color: var(--body); }
+.wrap { width: min(63rem, 100% - 3rem); margin-inline: auto; }
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding-block: 1.45rem;
+  border-bottom: 1px solid var(--line);
+}
+.brand { color: var(--text); text-decoration: none; font-weight: 700; }
+.mark {
+  display: inline-block;
+  vertical-align: -0.18em;
+  width: 0.65em;
+  height: 1.1em;
+  margin-right: 0.55rem;
+  border: 0.12em solid var(--mark);
+  border-radius: 0.17em;
+}
+nav { display: flex; flex-wrap: wrap; gap: 0.55rem 1.5rem; }
+main { max-width: 45rem; padding-block: clamp(2.1rem, 6vw, 5rem) 3.25rem; }
+h1, h2 { color: var(--text); font-weight: 700; line-height: 1.13; }
+h1 { font-size: clamp(2.3rem, 7vw, 5.3rem); letter-spacing: -0.055em; margin: 0 0 1.25rem; }
+h2 { font-size: 1.32rem; margin: 2.2rem 0 0.65rem; letter-spacing: -0.015em; }
+p { margin: 0 0 1rem; }
+.intro { color: var(--text); max-width: 39rem; font-size: clamp(1.1rem, 2vw, 1.4rem); }
+.last { margin-top: 2.4rem; font-size: 0.88rem; }
+a { color: var(--link); text-underline-offset: 0.22em; }
+a:focus-visible { outline: 2px solid var(--mark); outline-offset: 4px; }
+footer { border-top: 1px solid var(--line); padding-block: 1.25rem 2.4rem; font-size: 0.92rem; }
+@media (max-width: 32rem) {
+  .wrap { width: calc(100% - 1.75rem); }
+  header { gap: 0.6rem; }
+}
